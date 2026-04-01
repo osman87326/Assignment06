@@ -1,0 +1,177 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Starter Plan",
+    "description": "Perfect for freelancers and solo creators just getting started with essential tools.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Free",
+    "tagType": "new",
+    "features": [
+      "5 projects",
+      "Basic analytics",
+      "Community support",
+      "1GB storage",
+      "Export to PDF"
+    ],
+    "icon": "🚀"
+  },
+  {
+    "id": "prod_002",
+    "name": "Resume Builder Pro",
+    "description": "Craft job-winning resumes with ATS-friendly templates and expert suggestions.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF & DOCX",
+      "Real-time suggestions",
+      "Cover letter builder"
+    ],
+    "icon": "📄"
+  },
+  {
+    "id": "prod_003",
+    "name": "Team Workspace",
+    "description": "Collaborate seamlessly with your team in a shared, organized workspace.",
+    "price": 29.99,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "Up to 10 members",
+      "Shared dashboards",
+      "Role-based access",
+      "Slack integration",
+      "50GB storage",
+      "Priority support"
+    ],
+    "icon": "👥"
+  },
+  {
+    "id": "prod_004",
+    "name": "Cloud Storage Vault",
+    "description": "Secure, encrypted cloud storage for individuals and small businesses.",
+    "price": 4.99,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "500GB storage",
+      "AES-256 encryption",
+      "File versioning",
+      "Cross-device sync",
+      "Shareable links"
+    ],
+    "icon": "☁️"
+  },
+  {
+    "id": "prod_005",
+    "name": "Analytics Dashboard",
+    "description": "Track, analyze, and visualize your business metrics with powerful real-time dashboards.",
+    "price": 49.99,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "Unlimited reports",
+      "Real-time data",
+      "Custom KPI widgets",
+      "CSV & Excel export",
+      "API access",
+      "Email scheduling"
+    ],
+    "icon": "📊"
+  },
+  {
+    "id": "prod_006",
+    "name": "E-Commerce Booster",
+    "description": "All-in-one toolkit to launch, manage, and scale your online store effortlessly.",
+    "price": 199,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "Unlimited products",
+      "Payment gateway integration",
+      "Inventory management",
+      "SEO tools",
+      "Abandoned cart recovery",
+      "24/7 support"
+    ],
+    "icon": "🛒"
+  },
+  {
+    "id": "prod_007",
+    "name": "AI Writing Assistant",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with AI.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "Trending",
+    "tagType": "new",
+    "features": [
+      "Unlimited words",
+      "50+ writing tones",
+      "Plagiarism checker",
+      "SEO keyword suggestions",
+      "Multi-language support"
+    ],
+    "icon": "✍️"
+  },
+  {
+    "id": "prod_008",
+    "name": "DevOps Suite",
+    "description": "Streamline CI/CD pipelines, monitoring, and deployments for engineering teams.",
+    "price": 499,
+    "period": "yearly",
+    "tag": "Enterprise",
+    "tagType": "popular",
+    "features": [
+      "Unlimited pipelines",
+      "Container management",
+      "Uptime monitoring",
+      "Automated rollbacks",
+      "Multi-cloud support",
+      "Dedicated SLA"
+    ],
+    "icon": "⚙️"
+  },
+  {
+    "id": "prod_009",
+    "name": "Social Media Scheduler",
+    "description": "Plan, schedule, and auto-publish content across all your social media platforms.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "10 social accounts",
+      "Auto-scheduling",
+      "Content calendar",
+      "Hashtag suggestions",
+      "Engagement analytics"
+    ],
+    "icon": "📱"
+  },
+  {
+    "id": "prod_010",
+    "name": "Lifetime Access Pass",
+    "description": "One-time purchase for unlimited access to all current and future features — forever.",
+    "price": 299,
+    "period": "one-time",
+    "tag": "Best Value",
+    "tagType": "best-seller",
+    "features": [
+      "All Pro features",
+      "Lifetime updates",
+      "Unlimited projects",
+      "Priority support",
+      "Early access to beta features",
+      "Commercial license"
+    ],
+    "icon": "♾️"
+  }
+]
