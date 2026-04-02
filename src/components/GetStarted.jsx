@@ -1,7 +1,7 @@
 import React from 'react';
 import user from '../assets/user.png';
-import packages from '../assets/products/package .png'
-import rocketss from '../assets/products/rocket (2).png'
+import packages from '../assets/products/package.png'
+import rocketss from '../assets/products/rocket(2).png'
 
 
 const GetStarted = () => {
