@@ -1,119 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
+import { Suspense, useState } from 'react'
 import './App.css'
+import Banner from './components/Banner'
+import Body from './components/Body'
+import Count from './components/Count'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
+import WorkFlow from './components/WorkFlow'
+import Cart from './components/Cart'
+import ClickCarts from './components/ClickCarts'
+import Pricing from './components/Pricing'
+import GetStarted from './components/GetStarted'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const getTool = async () => {
+    const res = await fetch("/data.json");
+    return res.json()
+  }
+  const toolPromise = getTool();
+  const [activeTab, setActiveTab] = useState('product')
+  const [clickCarts, setClickCarts] = useState([]);
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+     <NavBar clickCarts={clickCarts}></NavBar>
+     <Banner></Banner>
+     <Count></Count>
+     <div className='m-20 space-y-4'>
+                <h1 className='text-5xl font-bold text-center'>Premium Digital Tools</h1>
+                <p className='text-center text-[#627382]' >Choose from our curated collection of premium digital <br /> products designedto boost your
+                     productivity and creativity.</p>
+            </div>
+     {/* name of each tab group should be unique */}
+<div 
+ className="tabs  justify-center gap-10">
+  <input onClick={() => setActiveTab('product')}
 
-      <div className="ticks"></div>
+   type="radio" name="my_tabs_1" className="tab text-2xl rounded-4xl
+   btn btn-outline btn-primary " aria-label="Products" defaultChecked />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+  <input  onClick={() => setActiveTab('carts')}
+  type="radio" name="my_tabs_1" className="tab text-2xl rounded-4xl  btn btn-outline btn-primary
+  " aria-label={`Carts (${clickCarts.length})` } />
+  
+</div>
+    <Suspense>
+       {activeTab === 'product' && <Body toolPromise={toolPromise} clickCarts= {clickCarts} 
+       setClickCarts = {setClickCarts} ></Body>}
+       {activeTab === 'carts' && <ClickCarts clickCarts= {clickCarts} 
+       setClickCarts = {setClickCarts} ></ClickCarts>}
+    </Suspense>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+    <GetStarted></GetStarted>
+    
+     <Pricing></Pricing>
+     <WorkFlow></WorkFlow>
+     <Footer></Footer>
     </>
   )
 }
